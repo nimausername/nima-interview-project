@@ -1,0 +1,28 @@
+{
+	"name": "@3mo/nima-interview",
+	"scripts": {
+		"start": "webpack serve --mode=development",
+		"test": "webpack --env=test --mode=development && karma start --single-run"
+	},
+	"license": "UNLICENSED",
+	"dependencies": {
+		"@3mo/model": "git+https://github.com/3mo-esolutions/model.git"
+	},
+	"devDependencies": {
+		"copy-webpack-plugin": "x",
+		"favicons-webpack-plugin": "x",
+		"html-webpack-plugin": "x",
+		"ts-lit-plugin": "x",
+		"ts-loader": "x",
+		"tsconfig-paths-webpack-plugin": "x",
+		"typescript": "5.x",
+		"webpack": "5.x",
+		"webpack-cli": "x",
+		"webpack-dev-server": "x",
+		"karma": "x",
+		"karma-chrome-launcher": "x",
+		"karma-firefox-launcher": "x",
+		"karma-helpful-reporter": "x",
+		"karma-jasmine": "x"
+	}
+}
