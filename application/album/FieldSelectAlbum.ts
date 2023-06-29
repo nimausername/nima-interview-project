@@ -1,4 +1,4 @@
-import { component, html, FieldFetchableSelect, property } from '@3mo/model'
+import { component, html, FieldFetchableSelect, property } from '@3mo/del'
 import { Album, AlbumService } from 'data'
 
 @component('sample-field-select-album')

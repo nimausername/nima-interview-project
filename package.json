@@ -6,7 +6,7 @@
 	},
 	"license": "UNLICENSED",
 	"dependencies": {
-		"@3mo/model": "git+https://github.com/3mo-esolutions/model.git"
+		"@3mo/del": "x"
 	},
 	"devDependencies": {
 		"copy-webpack-plugin": "x",
@@ -23,6 +23,7 @@
 		"karma-chrome-launcher": "x",
 		"karma-firefox-launcher": "x",
 		"karma-helpful-reporter": "x",
-		"karma-jasmine": "x"
+		"karma-jasmine": "x", 
+		"@types/jasmine": "x" 
 	}
 }

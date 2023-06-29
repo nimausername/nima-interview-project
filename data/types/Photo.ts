@@ -6,5 +6,6 @@ export type Photo = {
 	title: string
 	url: string
 	thumbnailUrl: string
-	children: Array<Photo>
+	children: Array<Photo>,
+	selected: boolean	// TODO [Task 2] Add the selected property of type boolean
 }

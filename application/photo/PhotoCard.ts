@@ -1,4 +1,4 @@
-import { component, Component, html, nothing, property, css, style } from '@3mo/model'
+import { component, Component, html, nothing, property, css, style } from '@3mo/del'
 import { Photo } from 'data'
 
 @component('sample-photo-card')
@@ -9,8 +9,8 @@ export class PhotoCard extends Component {
 	static override get styles() {
 		return css`
 			:host {
-				height: 100%;
-				width: 100%;
+				height: 100% !important;
+				width: 100% !important;
 			}
 
 			mo-card {
@@ -19,6 +19,7 @@ export class PhotoCard extends Component {
 				transition: var(--mo-duration-quick);
 				position: relative;
 				--mo-card-body-padding: 0px 8px 16px 8px;
+				display:flex; 	
 			}
 
 			mo-card:hover {
@@ -50,7 +51,7 @@ export class PhotoCard extends Component {
 		return !this.photo ? nothing : html`
 			<mo-card>
 				<mo-checkbox
-					?checked=${this.selected}
+					?checked=${this.photo.selected /* checked if this.photo.selected is true */} 
 					@change=${(e: CustomEvent<CheckboxValue>) => this.setSelection(e.detail === 'checked')}
 				></mo-checkbox>
 
@@ -70,8 +71,10 @@ export class PhotoCard extends Component {
 	}
 
 	private setSelection(value: boolean) {
-		value
-		// TODO [Task 3]: Add the selection logic
+		if(this.photo) {	//if photo exists
+			this.photo.title = (value ? "[SELECTED] " + this.photo.title : this.photo.title.replace("[SELECTED] ", ""));	//add or remove [SELECTED] from title
+			this.photo.selected = value; //set selected value true or false
+		}
 	}
 }
 

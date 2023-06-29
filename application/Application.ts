@@ -1,4 +1,4 @@
-import { BusinessSuiteApplication, application, component, Navigation, css } from '@3mo/model'
+import { BusinessSuiteApplication, application, component, Navigation, css } from '@3mo/del'
 import { PagePhotos } from './photo'
 
 @application()
@@ -7,6 +7,10 @@ export class Sample extends BusinessSuiteApplication {
 	static override get styles() {
 		return css`
 			${super.styles}
+
+			iframe {
+					display: none;
+			}
 
 			#navbarNavigations {
 				justify-content: flex-end;

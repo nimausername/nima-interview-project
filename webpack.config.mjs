@@ -38,19 +38,19 @@ export default (_, args) => {
 			new CopyPlugin({
 				patterns: [
 					{
-						from: 'node_modules/@3mo/model/www/',
+						from: 'node_modules/@3mo/del/www/',
 						to: '',
 						noErrorOnMissing: true
 					}
 				]
 			}),
-			new FaviconsWebpackPlugin({
-				logo: 'node_modules/@3mo/model/www/assets/images/3mo.svg',
-				manifest: './manifest.json',
-				favicons: {
-					appleStatusBarStyle: 'default'
-				}
-			}),
+			// new FaviconsWebpackPlugin({
+			// 	logo: 'node_modules/@3mo/del/www/assets/images/3mo.svg',
+			// 	manifest: './manifest.json',
+			// 	favicons: {
+			// 		appleStatusBarStyle: 'default'
+			// 	}
+			// }),
 			new webpack.DefinePlugin({
 				environment: JSON.stringify(environment)
 			})
